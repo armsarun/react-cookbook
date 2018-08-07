@@ -12,10 +12,8 @@ class StorePicker extends React.Component {
     this.goToStore = this.goToStore.bind(this)
   }
   goToStore(event){
+
     const storename = this.storeName.value;
-    // console.log(`${storename}`);
-    const url = `store/${storename}`;
-    <Redirect to= {`store/${storename}`} />
     this.props.history.push(`store/:${storename}`)
   }
 
